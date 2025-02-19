@@ -1,0 +1,349 @@
+1. "She _____ to the gym every morning."
+a) go
+b) goes
+c) going
+d) gone
+Answer: b) goes
+2. "Tom and _____ went to the concert last night."
+a) me
+b) I
+c) mine
+d) myself
+Answer: b) I
+3. "I have been waiting for you _____ an hour."
+a) since
+b) in
+c) for
+d) until
+Answer: c) for
+
+4. "Of the three siblings, Sarah is the _____."
+a) tall
+b) taller
+c) tallest
+d) most tall
+Answer: c) tallest
+
+5. "They _____ their homework before dinner."
+a) finished
+b) finishing
+c) have finished
+d) will finish
+Answer: a) finished
+
+6. "If he _____ the answer, he would tell us."
+a) knows
+b) knew
+c) knowing
+d) know
+Answer: b) knew
+
+7. "I wanted to go for a walk, _____ it started raining."
+a) but
+b) or
+c) so
+d) for
+Answer: a) but
+
+8. "There is _____ university near my house."
+a) a
+b) an
+c) the
+d) no article needed
+Answer: b) an
+
+9. "She _____ her homework by the time we arrived."
+a) finish
+b) finishes
+c) has finished
+d) had finished
+Answer: d) had finished
+
+
+10. "My brother _____ soccer every weekend."
+a) play
+b) plays
+c) playing
+d) played
+Answer: b) plays
+
+11. "_____ is my favorite book."
+a) This
+b) These
+c) Those
+d) There
+Answer: a) This
+
+12. "She _____ my best friend."
+a) am
+b) is
+c) are
+d) were
+Answer: b) is
+
+13. "We go to school _____ bus."
+a) on
+b) by
+c) in
+d) from
+Answer: b) by
+
+14. "My house is _____ than my friend’s house."
+a) big
+b) bigger
+c) biggest
+d) most big
+Answer: b) bigger
+
+15. "_____ is your birthday?"
+a) What
+b) Where
+c) When
+d) How
+Answer: c) When
+
+16. "They _____ breakfast at 7 AM every day."
+a) has
+b) have
+c) having
+d) had
+Answer: b) have
+
+17. "I have _____ apple in my bag."
+a) a
+b) an
+c) the
+d) some
+Answer: b) an
+
+18. "_____ your brother like to play basketball?"
+a) Do
+b) Does
+c) Are
+d) Is
+Answer: b) Does
+
+19. "She _____ to the library every Saturday."
+a) go
+b) goes
+c) going
+d) gone
+Answer: b) goes
+
+20. "They _____ very busy last weekend."
+a) is
+b) was
+c) were
+d) are
+Answer: c) were
+
+21. "Lisa and _____ are planning to study together."
+a) me
+b) mine
+c) I
+d) myself
+Answer: c) I
+
+22. "She has lived in this town _____ 2015."
+a) since
+b) for
+c) at
+d) in
+Answer: a) since
+
+23. "Would you like tea _____ coffee?"
+a) but
+b) and
+c) or
+d) so
+Answer: c) or
+
+24. "This test is _____ than the last one."
+a) easy
+b) easiest
+c) easier
+d) more easier
+Answer: c) easier
+
+25. "They _____ the project by next week."
+a) finish
+b) finishing
+c) will finish
+d) finished
+Answer: c) will finish
+
+26. "She wants to be _____ artist someday."
+a) a
+b) an
+c) the
+d) some
+Answer: b) an
+
+27. "If he _____ the answer, he would have told us."
+a) knows
+b) knew
+c) know
+d) knowing
+Answer: b) knew
+
+28. "If I _____ enough money, I would buy a new phone."
+a) has
+b) have
+c) had
+d) having
+Answer: c) had
+
+29. "They _____ in this city since 2019."
+a) live
+b) lived
+c) have lived
+d) lives
+Answer: c) have lived
+
+30. "The concert will start _____ 7 PM."
+a) at
+b) on
+c) in
+d) of
+Answer: a) at
+
+31. "You are coming to the party, _____?"
+a) are you
+b) aren’t you
+c) do you
+d) didn’t you
+Answer: b) aren’t you
+
+32. "Of all the students in the class, Anna is the _____."
+a) smart
+b) smarter
+c) smartest
+d) most smart
+Answer: c) smartest
+
+33. "He said that he _____ the answer."
+a) know
+b) knows
+c) knew
+d) knowing
+Answer: c) knew
+
+34. "We _____ finish the project by tomorrow."
+a) have to
+b) has to
+c) had to
+d) having to
+Answer: a) have to
+
+35. "She studied hard, _____ she could pass the exam."
+a) because
+b) but
+c) so
+d) or
+Answer: c) so
+
+
+36. "She _____ to school every day."
+a) go
+b) goes
+c) going
+d) gone
+Answer: b) goes
+
+37. "They _____ soccer right now."
+a) play
+b) plays
+c) are playing
+d) played
+Answer: c) are playing
+
+38. "Yesterday, I _____ my grandmother."
+a) visit
+b) visited
+c) visiting
+d) visits
+Answer: b) visited
+
+39. "He _____ here for two years."
+a) works
+b) worked
+c) has worked
+d) is working
+Answer: c) has worked
+
+40. "The students _____ English every morning."
+a) study
+b) studies
+c) studying
+d) studied
+
+41. "Each of the players _____ to win the game."
+a) want
+b) wants
+c) wanting
+d) wanted
+Answer: b) wants
+
+42. "She writes a letter."
+a) A letter is written by her.
+b) A letter was written by her.
+c) A letter is being written by her.
+d) A letter will be written by her.
+Answer: a) A letter is written by her.
+
+43. "They will finish the project by tomorrow."
+a) The project will finish by tomorrow.
+b) The project will be finished by tomorrow.
+c) The project is finished by tomorrow.
+d) The project has finished by tomorrow.
+Answer: b) The project will be finished by tomorrow.
+
+44. "You _____ wear a uniform to school."
+a) must
+b) might
+c) should
+d) can
+Answer: a) must
+
+45. "She _____ be there on time if she hurries."
+a) can
+b) should
+c) must
+d) might
+Answer: a) can
+
+46. This book is _____ than that one."
+a) interesting
+b) more interesting
+c) most interesting
+d) interestingly
+Answer: b) more interesting
+
+47. "She is the _____ student in the class."
+a) good
+b) better
+c) best
+d) more good
+Answer: c) best
+
+48. "My father _____ in a bank."
+a) work
+b) works
+c) working
+d) worked
+Answer: b) works
+
+49. "They _____ soccer every Saturday."
+a) plays
+b) played
+c) play
+d) playing
+Answer: c) play
+
+50. "The cat _____ on the sofa every afternoon."
+a) sleep
+b) sleeping
+c) sleeps
+d) slept
+Answer: c) sleeps
+

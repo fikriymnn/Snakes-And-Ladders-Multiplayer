@@ -1,0 +1,20 @@
+[
+    {
+        "question": "What is the correct form of the verb in this sentence: 'He _____ to the store every day.'",
+        "options": [
+            "goes",
+            "go",
+            "going"
+        ],
+        "answer": "goes"
+    },
+    {
+        "question": "Choose the correct sentence:",
+        "options": [
+            "She don't like pizza.",
+            "She doesn't like pizza.",
+            "She doesn't likes pizza."
+        ],
+        "answer": "She doesn't like pizza."
+    }
+]
