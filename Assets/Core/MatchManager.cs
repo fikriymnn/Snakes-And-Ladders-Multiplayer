@@ -45,6 +45,7 @@ namespace Game
             Active = true;
 
             Core.Dice.Show();
+            Core.LeaderboardManager.HideLeaderboard();
 
             if (OnBegin != null) OnBegin();
         }
@@ -74,6 +75,8 @@ namespace Game
                 text += winner.name + " Wins";
             else
                 text += "You " + (Core.Pawns.IsLocal(winner) ? "Won" : "Lost");
+
+            Core.LeaderboardManager.ShowLeaderboard();
 
             Core.Popup.Show(text, Core.Reload, "Reload");
         }

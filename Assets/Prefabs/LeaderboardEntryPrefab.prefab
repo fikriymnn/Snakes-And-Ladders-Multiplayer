@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 28.2322, y: -25}
-  m_SizeDelta: {x: 566.9701, y: 50}
+  m_SizeDelta: {x: 450.75, y: 105.7565}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8126704564017244581
 CanvasRenderer:
@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 28
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -78,4 +78,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player 1: 0 points, 0 questions, Score: 0'
+  m_Text: 'Player 1: 0 /  0 questions = 100'

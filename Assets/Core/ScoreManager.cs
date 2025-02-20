@@ -1,34 +1,48 @@
+using Photon.Pun;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game
 {
-    public class ScoreManager : MonoBehaviour
+    public class ScoreManager : MonoBehaviourPun
     {
-        private Dictionary<int, (int points, int questions)> playerScores = new Dictionary<int, (int points, int questions)>();
+        private Dictionary<int, (string pawnName, int points, int questions)> playerScores =
+    new Dictionary<int, (string pawnName, int points, int questions)>();
 
+
+        // Tambahkan tanda [PunRPC] pada metode yang akan dipanggil melalui RPC
+        [PunRPC]
         public void AddPoints(int playerID, int points, string pawnName)
+        {
+            if (PhotonNetwork.IsMasterClient)
+            {
+                photonView.RPC(nameof(UpdateScoreRPC), RpcTarget.All, playerID, points, pawnName);
+            }
+        }
+
+        [PunRPC]
+        void UpdateScoreRPC(int playerID, int points, string pawnName)
         {
             if (playerScores.ContainsKey(playerID))
             {
-                playerScores[playerID] = (playerScores[playerID].points + points, playerScores[playerID].questions + 1);
+                playerScores[playerID] = (pawnName, playerScores[playerID].points + points, playerScores[playerID].questions + 1);
             }
             else
             {
-                playerScores[playerID] = (points, 1);
+                playerScores[playerID] = (pawnName, points, 1);
             }
 
-            Debug.Log($"Player {pawnName} now has {playerScores[playerID].points} points and has answered {playerScores[playerID].questions} questions.");
+            Debug.Log($"[SYNC] Player {pawnName} now has {playerScores[playerID].points} points and has answered {playerScores[playerID].questions} questions.");
         }
 
-        public (int points, int questions) GetPlayerStats(int playerID)
+        public (string pawnName, int points, int questions) GetPlayerStats(int playerID)
         {
-            return playerScores.TryGetValue(playerID, out var stats) ? stats : (0, 0);
+            return playerScores.TryGetValue(playerID, out var stats) ? stats : (string.Empty, 0, 0);
         }
 
-        public Dictionary<int, (int points, int questions)> GetAllScores()
+        public Dictionary<int, (string pawnName, int points, int questions)> GetAllScores()
         {
-            return new Dictionary<int, (int points, int questions)>(playerScores);
+            return new Dictionary<int, (string pawnName, int points, int questions)>(playerScores);
         }
 
         public float GetPlayerAccuracy(int playerID)

@@ -41,5 +41,10 @@ MonoBehaviour:
   - TurnInitiation
   - HandleQuestion
   - UpdateScore
+  - RPC_AddPoints
+  - RPC_UpdateLeaderboard
+  - AddPoints
+  - SyncScores
+  - UpdateScoreRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1

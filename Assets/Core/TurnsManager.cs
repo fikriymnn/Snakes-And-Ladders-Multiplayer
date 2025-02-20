@@ -192,56 +192,27 @@ namespace Game
             var pawn = Pawns.Get(pawnID);
 
             if (!Pawns.IsLocal(pawn)) return;
-            //Debug.Log($"HandleQuestion: Displaying question for Player {pawnID}");
 
-            // Ambil pertanyaan acak
             global::Question question = Core.QuestionManager.GetRandomQuestion();
 
             if (question != null)
             {
-                if (popupQuestion == null || scoreManager == null)
-                {
-                    Debug.LogError("Error: Dependencies are not set.");
-                    return;
-                }
                 popupQuestion.ShowQuestion(question, (selectedIndex) =>
                 {
-                    // Cek jawaban pemain
                     bool isCorrect = question.CorrectAnswerIndex == selectedIndex;
                     Debug.Log(isCorrect ? "Jawaban benar!" : "Jawaban salah!");
 
                     if (isCorrect)
                     {
-                        if (Core.ScoreManager == null)
-                        {
-                            Debug.LogError("Error: Core.ScoreManager is null.");
-                            return;
-                        }
-                        if (pawn == null)
-                        {
-                            Debug.LogError("Error: Pawn is null.");
-                            return;
-                        }
-
-                        if (string.IsNullOrEmpty(pawn.ID.ToString()))
-                        {
-                            Debug.LogError("Error: Pawn ID is null or empty.");
-                            return;
-                        }
-
-                        Core.ScoreManager.AddPoints(pawn.ID, 1, pawn.name);
-                        Debug.Log($"Player {pawn.name} mendapatkan 1 poin.");
+                        Core.ScoreManager.photonView.RPC(nameof(ScoreManager.AddPoints), RpcTarget.All, pawn.ID, 1, pawn.name);
                     }
                     else
                     {
-                        Core.ScoreManager.AddPoints(pawn.ID, 0, pawn.name);
-                        Debug.Log($"Player {pawn.name} tidak mendapatkan poin.");
+                        Core.ScoreManager.photonView.RPC(nameof(ScoreManager.AddPoints), RpcTarget.All, pawn.ID, 0, pawn.name);
                     }
-                    // Hitung persentase skor pemain
+
                     leaderboardManager.UpdateLeaderboard();
 
-
-                    // Lanjutkan giliran
                     photonView.RPC(nameof(TurnEnd), RpcTarget.MasterClient, pawnID, pawn.Progress);
                 });
             }
@@ -250,8 +221,8 @@ namespace Game
                 Debug.Log("Tidak ada pertanyaan yang tersedia.");
                 photonView.RPC(nameof(TurnEnd), RpcTarget.MasterClient, pawnID, pawn.Progress);
             }
-
         }
+
 
         [PunRPC]
         void TurnEnd(int pawnID, int progress)
@@ -278,6 +249,8 @@ namespace Game
 
             if (PhotonNetwork.IsMasterClient)
                 photonView.RPC(nameof(TurnInitiation), RpcTarget.All, Pawns[PawnIndex].ID);
+
+            leaderboardManager.UpdateLeaderboard();
         }
         public delegate void TurnEndDelegate(Pawn pawn, int progress);
         public event TurnEndDelegate OnTurnEnd;
