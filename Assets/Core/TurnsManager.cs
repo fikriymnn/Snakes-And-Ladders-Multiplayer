@@ -38,6 +38,11 @@ namespace Game
         public PopupQuestion popupQuestion;
         public LeaderboardManager leaderboardManager;
         private ScoreManager scoreManager;
+        public GameObject panelBenar;
+        public GameObject panelSalah;
+        public AudioSource audioSource;
+        public AudioClip audioBenar; // Suara jawaban benar
+        public AudioClip audioSalah; // Suara jawaban salah
         public int ClampToPlayerIndex(int value)
         {
             if (value >= Pawns.Count) value = 0;
@@ -81,6 +86,9 @@ namespace Game
             {
                 Debug.LogError("LeaderboardManager is missing in the scene.");
             }
+
+            panelBenar.SetActive(false);
+            panelSalah.SetActive(false);
         }
 
         void Update()
@@ -205,10 +213,12 @@ namespace Game
                     if (isCorrect)
                     {
                         Core.ScoreManager.photonView.RPC(nameof(ScoreManager.AddPoints), RpcTarget.All, pawn.ID, 1, pawn.name);
+                        ShowPanel(panelBenar, audioBenar);
                     }
                     else
                     {
                         Core.ScoreManager.photonView.RPC(nameof(ScoreManager.AddPoints), RpcTarget.All, pawn.ID, 0, pawn.name);
+                        ShowPanel(panelSalah, audioSalah);
                     }
 
                     leaderboardManager.UpdateLeaderboard();
@@ -273,6 +283,24 @@ namespace Game
                     photonView.RPC(nameof(TurnInitiation), RpcTarget.All, Pawns[PawnIndex].ID);
                 }
             }
+        }
+
+        private void ShowPanel(GameObject panel, AudioClip sound)
+        {
+            panel.SetActive(true);
+
+            if (audioSource != null && sound != null)
+            {
+                audioSource.PlayOneShot(sound); // Mainkan audio
+            }
+
+            StartCoroutine(HidePanelAfterDelay(panel));
+        }
+
+        private IEnumerator HidePanelAfterDelay(GameObject panel)
+        {
+            yield return new WaitForSeconds(2f);
+            panel.SetActive(false);
         }
 
         void OnDestroy()

@@ -32,6 +32,12 @@ namespace Game
         protected Text label;
         public Text Label { get { return label; } }
 
+        [SerializeField] 
+        private AudioSource backgroundMusic;
+
+        [SerializeField]
+        private AudioSource backgroundMusic2;
+
         [SerializeField]
         protected ProgressController progress;
         public ProgressController Progress { get { return progress; } }
@@ -92,6 +98,16 @@ namespace Game
         void Awake()
         {
             Button.onClick.AddListener(OnClick);
+
+            if (backgroundMusic != null)
+            {
+                backgroundMusic.Stop();
+            }
+
+            if (backgroundMusic2 != null)
+            {
+                backgroundMusic2.Play();
+            }
         }
 
         void OnClick()
